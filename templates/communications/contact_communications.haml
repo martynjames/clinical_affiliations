@@ -1,0 +1,9 @@
+%table
+  %tr
+    %th Date
+    %th Communication
+  - for communication in communications
+    %tr
+      %td= communication.datestamp
+      %td= communication.details
+

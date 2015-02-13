@@ -37,5 +37,5 @@ class Contact(models.Model):
 class Communication(models.Model):
     """ A model representing an individual communication item with a specific contact """
     contact = models.ForeignKey(Contact)
-    timestamp = models.DateTimeField('communication date')
+    datestamp = models.DateField('communication date')
     details = models.TextField()

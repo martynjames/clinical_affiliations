@@ -1,0 +1,44 @@
+!!! 5
+%html.no-js{lang:"en"}
+  -# load assets
+  - load staticfiles
+  %head
+    %meta{charset: "utf-8"}
+    %meta{'http-equiv': "X-UA-Compatible", content: "IE=edge"}
+    %meta{name: "viewport", content: "width=device-width, maximum-scale=1, user-scalable=no"}
+    - block meta
+    - block page_title
+      %title= _("BU Medical School - Affiliated Hospitals")
+
+    - block css
+      %link{rel: "stylesheet", href: "{% static 'css/normalize.css' %}"}
+
+  %body
+    -# Header
+    - block header
+      - include 'header.haml'
+
+    -# Main content goes here
+    - block content
+
+    -# Footer
+    - block footer
+      - include 'footer.haml'
+
+    -# Override if you need another version of jQuery
+    - block foundation_jquery
+        %script{src: "//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"}
+
+    -# Foundation JS
+    - block foundation_js
+      %script{src: "{% static 'js/foundation.min.js' %}"}
+
+    -# Custom JS
+    - block body_js
+
+    -# JS - custom snippets
+    - block js_snippets
+
+    -# Init Foundation
+    - block foundation_js_init
+      %script $(document).foundation();
