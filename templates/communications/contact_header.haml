@@ -1,3 +1,9 @@
+.breadcrumbs
+  %a{href: "/"}
+    All Hospitals
+  >
+  %a{href: "/communications/institutions/#{contact.institution.id}"}
+    = contact.institution.name
 %h1
   %span= contact.first_name
   %span= contact.last_name

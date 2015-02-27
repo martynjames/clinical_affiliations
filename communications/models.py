@@ -39,3 +39,7 @@ class Communication(models.Model):
     contact = models.ForeignKey(Contact)
     datestamp = models.DateField('communication date')
     details = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __unicode__(self):
+        return u"Communication with {}".format(self.contact)
