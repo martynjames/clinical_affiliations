@@ -11,7 +11,7 @@ from .models import Institution, Contact, Communication
 def institutions(request):
     """ List the institutions with which we are affiliated """
     data = {
-        "institutions": Institution.objects.all(),
+        "institutions": Institution.objects.all().order_by('name'),
     }
     return render(request, 'communications/institutions.haml', data)
 

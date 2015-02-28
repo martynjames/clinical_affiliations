@@ -1,7 +1,8 @@
 - extends "layout.haml"
 
 - block content
-  .large-10.large-centered.columns
+  .large-12.large-centered.columns
   - for institution in institutions
-    %a{href: "/communications/institutions/#{institution.id}"}
-      = institution.name
+    .institution
+      %a{href: "/communications/institutions/#{institution.id}"}
+        = institution.name
