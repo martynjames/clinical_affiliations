@@ -1,16 +1,17 @@
-%table
-  %tr
-    %th Contact
-    %th Clerkship or Position
-    %th Communication
-  - for contact in contacts
+.large-12.large-centered.columns
+  %table
     %tr
-      %td
-        %a{href: "/communications/contact/#{contact.id}"}
-          %span= contact.first_name
-          %span= contact.last_name
-      %td= contact.title
-      %td
-        - if contact.latest_communication
-          = contact.latest_communication
+      %th Contact
+      %th Clerkship or Position
+      %th Communication
+    - for contact in contacts
+      %tr
+        %td
+          %a{href: "/communications/contact/#{contact.id}"}
+            %span= contact.first_name
+            %span= contact.last_name
+        %td= contact.title
+        %td
+          - if contact.latest_communication
+            = contact.latest_communication
 

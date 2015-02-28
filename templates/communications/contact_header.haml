@@ -1,28 +1,28 @@
 .breadcrumbs
   %a{href: "/"}
     All Hospitals
-  >
   %a{href: "/communications/institutions/#{contact.institution.id}"}
     = contact.institution.name
-%h1
-  %span= contact.first_name
-  %span= contact.last_name
-.phone
-  Phone:
-  %span= contact.phone
-.email
-  Email:
-  %span= contact.email
-.appointment
-  Faculty Appoinment Status:
-  %span= contact.appointment_status
-.number
-  Number Of Students:
-  %span= contact.number_of_students
-.details
-  Details:
-  %textarea
-    = contact.details
-.active
-  Active Since:
-  %span= contact.active_since
+.large-12.large-centered.columns
+  %h1
+    %span= contact.first_name
+    %span= contact.last_name
+  .phone
+    Phone:
+    %span= contact.phone
+  .email
+    Email:
+    %span= contact.email
+  .appointment
+    Faculty Appoinment Status:
+    %span= contact.appointment_status
+  .number
+    Number Of Students:
+    %span= contact.number_of_students
+  .details
+    Details:
+    %textarea
+      = contact.details
+  .active
+    Active Since:
+    %span= contact.active_since

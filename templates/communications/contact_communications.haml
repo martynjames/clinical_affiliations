@@ -1,9 +1,10 @@
-%table
-  %tr
-    %th Date
-    %th Communication
-  - for communication in communications
+.large-12.large-centered.columns
+  %table
     %tr
-      %td= communication.datestamp
-      %td= communication.details
+      %th Date
+      %th Communication
+    - for communication in communications
+      %tr
+        %td= communication.datestamp
+        %td= communication.details
 

@@ -1,12 +1,13 @@
 .breadcrumbs
   %a{href: "/"}
     All Hospitals
-%h1
-  = institution.name
-.address
-.field= institution.address_1
-.field= institution.address_2
-.field
-  .city= institution.city
-  .state= institution.state
-  .zip= institution.postal_code
+.large-12.large-centered.columns
+  %h1
+    = institution.name
+  .address
+  .field= institution.address_1
+  .field= institution.address_2
+  .field
+    .city= institution.city
+    .state= institution.state
+    .zip= institution.postal_code

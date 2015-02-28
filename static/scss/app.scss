@@ -38,3 +38,16 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+.top-bar {
+  background-image: url(http://www.bumc.bu.edu/busm/wp-content/themes/flexi-framework/images/boston-university-logo.gif);
+  background-repeat: no-repeat;
+  background-size: 90px;
+  background-position: 0px 2px;
+  padding: 0 20px 0 100px;
+  color: white;
+}
+
+.logout {
+  float: right;
+}
