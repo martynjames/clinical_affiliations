@@ -1,8 +1,23 @@
 - extends "layout.haml"
 
 - block content
-  .large-12.large-centered.columns
   - for institution in institutions
     .institution
       %a{href: "/communications/institutions/#{institution.id}"}
         = institution.name
+  .bottom
+    %a.button.small{"data-reveal-id": "new-institution", href: "#"}
+      Add New Instiution
+
+  #new-institution.reveal-modal.small{"data-reveal": "true"}
+    %a.close-reveal-modal
+      x
+    %form{action: "#{form_action}", method: "POST"}
+      .error
+        - if error
+          ERRORS:
+          = error
+      - csrf_token
+      %fieldset= form.as_p
+      .submit-area
+        %input.button.radius.small{type: "submit", value: "Save"}

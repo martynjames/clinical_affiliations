@@ -3,3 +3,19 @@
 - block content
   - include "communications/institution_header.haml"
   - include "communications/institution_contacts.haml"
+  .bottom
+    %a.button.small{"data-reveal-id": "new-contact"}
+      Add New Contact
+
+  #new-contact.reveal-modal.small{"data-reveal": "true"}
+    %a.close-reveal-modal
+      x
+    %form{action: "#{form_action}", method: "POST"}
+      .error
+        - if error
+          ERRORS:
+          = error
+      - csrf_token
+      %fieldset= form.as_p
+      .submit-area
+        %input.button.radius.small{type: "submit", value: "Save"}

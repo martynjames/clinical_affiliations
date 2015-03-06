@@ -10,8 +10,10 @@
           %a{href: "/communications/contact/#{contact.id}"}
             %span= contact.first_name
             %span= contact.last_name
-        %td= contact.title
+        %td
+          %a{href: "/communications/contact/#{contact.id}"}
+            = contact.title
         %td
           - if contact.latest_communication
-            = contact.latest_communication
-
+            %a{href: "/communications/contact/#{contact.id}"}
+              = contact.latest_communication
