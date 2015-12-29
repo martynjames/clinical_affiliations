@@ -39,7 +39,7 @@ def institution(request, institution_id):
 
     institution_contacts = Contact.objects.filter(institution=the_institution).order_by('last_name')
     for institution_contact in institution_contacts:
-        communications = Communication.objects.filter(contact=institution_contact).order_by('datestamp')
+        communications = Communication.objects.filter(contact=institution_contact).order_by('-datestamp')
         institution_contact.latest_communication = None
         if len(communications):
             institution_contact.latest_communication = "{} | {}".format(

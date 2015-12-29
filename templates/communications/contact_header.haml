@@ -14,14 +14,14 @@
     Email:
     %span= contact.email
   .appointment
-    Faculty Appoinment Status:
+    Faculty Appointment Status:
     %span= contact.appointment_status
   .number
     Number Of Students:
     %span= contact.number_of_students
   .details
     Details:
-    %textarea
+    %textarea{:disabled => "disabled"}
       = contact.details
   .active
     Active Since:
